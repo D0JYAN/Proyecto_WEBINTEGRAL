@@ -16,7 +16,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     //Realizar la solicitud POST al servidor
     try {
         console.log("Intentando conectar con el servidor Node.js...");
-        const response = await fetch('http://localhost:3000/users/register', {
+        const response = await fetch('https://proyecto-webintegral.onrender.com/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

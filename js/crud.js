@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000/passwords'; // URL de tu API
+const apiUrl = 'https://proyecto-webintegral.onrender.com/passwords'; // URL de tu API
 
 // Configurar el botón de añadir
 document.getElementById('add-button').addEventListener('click', addRow);

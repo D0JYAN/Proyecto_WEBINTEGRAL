@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     // Realiza la solicitud POST al servidor
     try {
         console.log("Intentando conectar con el servidor Node.js...");
-        const response = await fetch('http://localhost:3000/users/login', {
+        const response = await fetch('https://proyecto-webintegral.onrender.com/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
