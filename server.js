@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 // Configurar CORS
 const cors = require('cors');
 
+//Importar path
+const path = require('node:path');
+
 // Importar las rutas
 const usersRoutes = require('./routes/usersRoutes');
 const passwordsRoutes = require('./routes/passwordsRoutes');
@@ -21,18 +24,16 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));  // Añadir esta línea para procesar datos de formularios
 
+//Servir recursos
+app.use(express.static(path.join(__dirname)));
+
 // Rutas de la API
 app.use('/users', usersRoutes);
 app.use('/passwords', passwordsRoutes); // La ruta para manejar las contraseñas es ahora /api/passwords
 
-// Ruta para servir index.html
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');  // Asegúrate de que index.html esté en la raíz
-});
-
 // Ruta para servir login.html
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/login.html');  // Asegúrate de que login.html esté en la raíz
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
 });
 
 // Ruta para manejar el login (POST)

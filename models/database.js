@@ -4,10 +4,10 @@ const mysql = require('mysql2');//Instalar el modulo de MySql2
 //host, username, password, db
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'secupass'
+    host: 'bneujvh7ctxzoxczhj2b-mysql.services.clever-cloud.com',
+    user: 'u5hs0b0byp2fhxoo',
+    password: 'BFWD7h4YFovylDaFaYgj',
+    database: 'bneujvh7ctxzoxczhj2b'
 })
 
 //Conectar a la base de datos
