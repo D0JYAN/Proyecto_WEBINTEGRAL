@@ -56,7 +56,7 @@ function savePassword() {
     }
 
     // Enviar los datos al servidor
-    fetch('http://localhost:3000/passwords', {
+    fetch('https://proyecto-webintegral.onrender.com/passwords', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
